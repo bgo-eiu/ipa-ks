@@ -121,9 +121,9 @@ function kal_ipa(token) {
 	token = token.replace(/ ([bcdfghjklmnŋpqrstvwxz])([aeiouyæøå])(\2)/ig, ' ²$1$2$3');
 	token = token.replace(/ ([aeiouyæøå])(\1)/ig, ' ²$1$2');
 
-	token = token.replace(/(u) ([¹²]?)v([uo])/ig, '$1 $2<sup>w</sup>$3');
-	token = token.replace(/(u) ([¹²]?)([aeiouyæøå])/ig, '$1 $2<sup>w</sup>$3');
-	token = token.replace(/(i) ([¹²]?)([uoa])/ig, '$1 $2<sup>j</sup>$3');
+	token = token.replace(/(u) ([¹²]?)v([uo])/ig, '$1 $2ʷ$3');
+	token = token.replace(/(u) ([¹²]?)([aeiouyæøå])/ig, '$1 $2ʷ$3');
+	token = token.replace(/(i) ([¹²]?)([uoa])/ig, '$1 $2ʲ$3');
 
 	token = token.replace(/ ([¹²]?)g/ig, ' $1ɣ');
 	token = token.replace(/r ([¹²]?)r/ig, 'χ $1χ');
@@ -137,14 +137,14 @@ function kal_ipa(token) {
 	token = token.replace(/aa( ?[¹²]?[ʁqrχ])/ig, 'ɑː$1');
 	token = token.replace(/a( ?[¹²]?[ʁqrχ])/ig, 'ɑ$1');
 
-	token = token.replace(/t( ?[iɜ])/ig, 't<sup>s</sup>$1');
-	token = token.replace(/t ([¹²]?)s/ig, 't $1t<sup>s</sup>');
+	token = token.replace(/t( ?[iɜ])/ig, 'tˢ$1');
+	token = token.replace(/t ([¹²]?)s/ig, 't $1tˢ');
 	token = token.replace(/[bcdfghjklmnŋpqrstvwxz] ([¹²]?)([bcdfghjklmnŋpqrstvwxz])/ig, '$2 $1$2');
 	token = token.replace(/l l/ig, 'ɬ ɬ');
 	token = token.replace(/l ¹l/ig, 'ɬ ¹ɬ');
 	token = token.replace(/l ²l/ig, 'ɬ ²ɬ');
-	token = token.replace(/t<sup>s<\/sup>t<sup>s<\/sup>/ig, 'tt<sup>s</sup>');
-	token = token.replace(/([aeiouyæøå])\1/ig, '$1:');
+	token = token.replace(/tˢtˢ/ig, 'ttˢ');
+	token = token.replace(/([aeiouyæøå])\1/ig, '$1ː');
 
 	token = token.replace(/ a( ?[tns])/ig, ' ɛ$1');
 
